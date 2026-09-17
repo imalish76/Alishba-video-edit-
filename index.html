@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy 27th Birthday Usman 💙</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  min-height:100vh;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(135deg,#071d35,#0b4d75,#39a9d6);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* ---------- STARTING SCREEN ---------- */
+
+.start{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.start-content{
+  z-index:5;
+  animation:fadeIn 1.5s ease;
+}
+
+.small-title{
+  font-size:15px;
+  letter-spacing:4px;
+  opacity:.8;
+  margin-bottom:15px;
+}
+
+.start h1{
+  font-family:Georgia,serif;
+  font-size:48px;
+  line-height:1.1;
+  text-shadow:0 4px 15px rgba(0,0,0,.3);
+}
+
+.start h2{
+  font-family:Georgia,serif;
+  font-size:32px;
+  margin-top:12px;
+  color:#bceeff;
+}
+
+.age{
+  font-size:22px;
+  margin:18px 0;
+  color:#d9f7ff;
+}
+
+.open-btn{
+  border:0;
+  padding:15px 30px;
+  border-radius:40px;
+  background:white;
+  color:#0872a7;
+  font-size:16px;
+  font-weight:bold;
+  box-shadow:0 8px 25px rgba(0,0,0,.25);
+  cursor:pointer;
+}
+
+.open-btn:active{
+  transform:scale(.94);
+}
+
+/* ---------- BALLOONS ---------- */
+
+.balloon{
+  position:absolute;
+  width:58px;
+  height:72px;
+  border-radius:50%;
+  animation:float 4s ease-in-out infinite;
+}
+
+.balloon:after{
+  content:"";
+  position:absolute;
+  top:70px;
+  left:50%;
+  height:160px;
+  width:1px;
+  background:rgba(255,255,255,.6);
+}
+
+.b1{
+  left:7%;
+  top:12%;
+  background:#6bd4ff;
+}
+
+.b2{
+  right:8%;
+  top:18%;
+  background:#b3ecff;
+  animation-delay:1s;
+}
+
+.b3{
+  left:18%;
+  bottom:15%;
+  background:#278fca;
+  animation-delay:1.5s;
+}
+
+.b4{
+  right:18%;
+  bottom:13%;
+  background:#82dfff;
+  animation-delay:2s;
+}
+
+@keyframes float{
+  0%,100%{
+    transform:translateY(0) rotate(-4deg);
+  }
+  50%{
+    transform:translateY(-25px) rotate(5deg);
+  }
+}
+
+/* ---------- CARD ---------- */
+
+.card-section{
+  min-height:100vh;
+  display:none;
+  justify-content:center;
+  padding:35px 15px 50px;
+  animation:fadeIn 1s ease;
+}
+
+.card{
+  width:100%;
+  max-width:450px;
+  background:rgba(255,255,255,.96);
+  color:#244c62;
+  border-radius:32px;
+  padding:30px 23px;
+  box-shadow:0 20px 60px rgba(0,0,0,.3);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.card-top{
+  font-size:14px;
+  letter-spacing:3px;
+  color:#4b9fc4;
+}
+
+.card h1{
+  font-family:Georgia,serif;
+  color:#147eae;
+  font-size:37px;
+  margin:12px 0 4px;
+}
+
+.card h2{
+  color:#3e7189;
+  font-family:Georgia,serif;
+  font-size:25px;
+}
+
+.number{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  width:85px;
+  height:85px;
+  border-radius:50%;
+  margin:20px 0;
+  background:linear-gradient(135deg,#35aadd,#0a6d9d);
+  color:white;
+  font-size:34px;
+  font-weight:bold;
+  box-shadow:0 10px 25px rgba(20,130,180,.3);
+}
+
+.divider{
+  height:1px;
+  background:#cdebf5;
+  margin:5px 0 22px;
+}
+
+.wishes{
+  text-align:left;
+  font-family:Georgia,serif;
+  font-size:17px;
+  line-height:1.8;
+  color:#456b7c;
+}
+
+.wishes p{
+  margin-bottom:17px;
+}
+
+.highlight{
+  background:#e9f8ff;
+  border-radius:20px;
+  padding:20px 17px;
+  margin:22px 0;
+  color:#28627e;
+  line-height:1.7;
+}
+
+.highlight b{
+  color:#0d79a8;
+}
+
+/* ---------- SURPRISE ---------- */
+
+.surprise-box{
+  margin-top:25px;
+  padding:23px 17px;
+  border-radius:22px;
+  background:linear-gradient(135deg,#d9f5ff,#effbff);
+}
+
+.surprise-box button{
+  border:0;
+  background:linear-gradient(135deg,#168bc0,#075f8b);
+  color:white;
+  padding:14px 25px;
+  border-radius:30px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+#surprise{
+  display:none;
+  margin-top:20px;
+  font-family:Georgia,serif;
+  line-height:1.8;
+  font-size:17px;
+  color:#32647b;
+  animation:appear .8s ease;
+}
+
+.from{
+  margin-top:28px;
+  padding-top:20px;
+  border-top:1px solid #cdebf5;
+  font-family:Georgia,serif;
+  color:#247ea6;
+}
+
+.from strong{
+  font-size:23px;
+}
+
+.footer{
+  margin-top:20px;
+  font-size:12px;
+  color:#88aab8;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes appear{
+  from{
+    opacity:0;
+    transform:scale(.8);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+/* ---------- FALLING EFFECT ---------- */
+
+.fall{
+  position:fixed;
+  top:-30px;
+  z-index:99;
+  pointer-events:none;
+  animation:fall 4s linear forwards;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(360deg);
+    opacity:0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= START SCREEN ================= -->
+
+<section class="start" id="start">
+
+  <div class="balloon b1"></div>
+  <div class="balloon b2"></div>
+  <div class="balloon b3"></div>
+  <div class="balloon b4"></div>
+
+  <div class="start-content">
+
+    <div class="small-title">
+      A SPECIAL DAY FOR SOMEONE SPECIAL
+    </div>
+
+    <h1>🎉 Happy Birthday 🎉</h1>
+
+    <h2>Usman 💙</h2>
+
+    <div class="age">
+      Cheers to 27 wonderful years! ✨
+    </div>
+
+    <button class="open-btn" onclick="openCard()">
+      💌 Open Your Birthday Card
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- ================= LONG CARD ================= -->
+
+<section class="card-section" id="cardSection">
+
+  <div class="card">
+
+    <div class="card-top">
+      ✨ A BIRTHDAY MESSAGE ✨
+    </div>
+
+    <h1>Happy Birthday</h1>
+
+    <h2>Dear Usman 💙</h2>
+
+    <div class="number">
+      27
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="wishes">
+
+      <p>
+        Today is not just another day. It's the day
+        we celebrate <b>you</b> and the beautiful
+        person you have become. 🎂
+      </p>
+
+      <p>
+        May this new chapter of your life bring you
+        countless reasons to smile, peaceful days,
+        beautiful memories and success in everything
+        you work for. ✨
+      </p>
+
+      <p>
+        May you always have the courage to chase your
+        dreams, the strength to overcome every
+        difficult moment and the happiness you truly
+        deserve. 💙
+      </p>
+
+    </div>
+
+    <div class="highlight">
+
+      <b>For my brother...</b>
+
+      <br><br>
+
+      No matter how much we tease each other,
+      argue over little things or annoy each other 😂,
+      having a brother like you is still one of
+      life's sweetest blessings.
+
+      <br><br>
+
+      I hope your 27th year becomes full of
+      happiness, success, laughter and unforgettable
+      moments. 🫶🏻
+
+    </div>
+
+    <div class="wishes">
+
+      <p>
+        Keep believing in yourself and never forget
+        how capable you are. Wherever life takes you,
+        I will always wish the best for you. 🌙✨
+      </p>
+
+      <p>
+        May Allah bless you with a long, happy,
+        peaceful and successful life, protect you
+        from every difficulty and fill your future
+        with endless blessings. Ameen. 🤲🏻💙
+      </p>
+
+    </div>
+
+    <!-- SURPRISE -->
+
+    <div class="surprise-box">
+
+      <button onclick="showSurprise()">
+        🎁 Open One Last Surprise
+      </button>
+
+      <div id="surprise">
+
+        🥹💙 <b>One more thing...</b>
+
+        <br><br>
+
+        You are officially 27 now! 😂🎂
+
+        <br><br>
+
+        So enjoy your day, eat lots of cake,
+        keep smiling and make this year
+        one to remember. 🎈✨
+
+        <br><br>
+
+        And remember...
+
+        <br>
+
+        <b>
+        No matter how old you get,
+        you'll always be my brother. 💙
+        </b>
+
+      </div>
+
+    </div>
+
+    <div class="from">
+
+      With lots of love,
+      <br><br>
+
+      <strong>From Sister Alishba 💙</strong>
+
+    </div>
+
+    <div class="footer">
+      Made especially for Usman's 27th birthday 🎂✨
+    </div>
+
+  </div>
+
+</section>
+
+
+<script>
+
+function openCard(){
+
+  document.getElementById("start").style.display="none";
+
+  document.getElementById("cardSection").style.display="flex";
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+  celebration();
+
+}
+
+
+function showSurprise(){
+
+  document.getElementById("surprise").style.display="block";
+
+  celebration();
+
+}
+
+
+function celebration(){
+
+  const emojis=[
+    "💙",
+    "🎈",
+    "✨",
+    "🎉",
+    "⭐",
+    "🤍",
+    "🎂"
+  ];
+
+  for(let i=0;i<35;i++){
+
+    const item=document.createElement("div");
+
+    item.className="fall";
+
+    item.innerHTML=
+      emojis[Math.floor(Math.random()*emojis.length)];
+
+    item.style.left=
+      Math.random()*100+"vw";
+
+    item.style.fontSize=
+      (15+Math.random()*18)+"px";
+
+    item.style.animationDuration=
+      (2.5+Math.random()*3)+"s";
+
+    document.body.appendChild(item);
+
+    setTimeout(()=>{
+      item.remove();
+    },6000);
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
